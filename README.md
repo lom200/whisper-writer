@@ -105,7 +105,7 @@ On first run, a Settings window should appear. Once configured and saved, anothe
 
 ### Configuration Options
 
-WhisperWriter uses a configuration file to customize its behaviour. To set up the configuration, open the Settings window:
+WhisperWriter uses a configuration file to customize its behaviour. Modifier keys are named in config (for example `meta` for the Windows key, `cmd` for macOS). To set up the configuration, open the Settings window:
 
 <p align="center">
     <img src="./assets/ww-settings-demo.gif" alt="WhisperWriter Settings window demo gif" width="350" height="350">
@@ -146,6 +146,7 @@ WhisperWriter uses a configuration file to customize its behaviour. To set up th
 - `add_trailing_space`: Set to `true` to add a space to the end of the transcribed text. (Default: `true`)
 - `remove_capitalization`: Set to `true` to convert the transcribed text to lowercase. (Default: `false`)
 - `input_method`: Choose how Whisper-Writer enters text (`pynput` for simulated typing, `clipboard` to copy/paste, `ydotool`/`dotool` on Linux). (Default: `pynput`)
+  - Note: Clipboard mode sends Ctrl/Cmd+V. If your activation hotkey already holds Ctrl (for example `ctrl+meta`), Windows may paste a literal 'v'; change the hotkey or modifier combo.
 
 #### Miscellaneous Options
 - `print_to_terminal`: Set to `true` to print the script status and transcribed text to the terminal. (Default: `true`)
